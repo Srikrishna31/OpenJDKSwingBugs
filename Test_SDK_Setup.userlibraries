@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="scala-sdk-2.11.8">
+    <archive path="C:/Users/kaddepal.ORADEV/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.8.jar" />
+    <archive path="C:/Users/kaddepal.ORADEV/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.11.8.jar" />
+    <archive path="C:/Users/kaddepal.ORADEV/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.8-sources.jar" />
+    <archive path="C:/Users/kaddepal.ORADEV/.ivy2/cache/org.scala-lang/scala-reflect/srcs/scala-reflect-2.11.8-sources.jar" />
+  </library>
+  <library name="scala-sdk-2.12.2">
+    <archive path="C:/Users/kaddepal.ORADEV/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.12.2.jar" />
+    <archive path="C:/Users/kaddepal.ORADEV/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.12.2.jar" />
+    <archive path="C:/Users/kaddepal.ORADEV/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.12.2-sources.jar" />
+    <archive path="C:/Users/kaddepal.ORADEV/.ivy2/cache/org.scala-lang/scala-reflect/srcs/scala-reflect-2.12.2-sources.jar" />
+  </library>
+</eclipse-userlibraries>
+

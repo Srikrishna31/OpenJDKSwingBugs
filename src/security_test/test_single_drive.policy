@@ -1,0 +1,13 @@
+grant {
+  permission java.io.FilePermission "${user.home}${/}", "read";
+  permission java.util.PropertyPermission "os.version", "read";
+
+  permission java.util.PropertyPermission "os.name", "read";
+  permission java.util.PropertyPermission "os.arch", "read";
+  permission java.util.PropertyPermission "user.dir", "read";
+  permission java.util.PropertyPermission "user.home", "read";
+
+  permission java.lang.RuntimePermission "accessClassInPackage.sun.awt.shell.*";
+  permission java.lang.RuntimePermission "accessClassInPackage.sun.awt.shell";
+};
+

@@ -1,0 +1,25 @@
+grant {
+    permission java.io.FilePermission "${user.home}${/}Desktop${/}", "read";
+    permission java.io.FilePermission "${user.home}${/}Desktop${/}-", "read";
+
+    permission java.util.PropertyPermission "os.version", "read";
+
+    permission java.util.PropertyPermission "os.name", "read";
+    permission java.util.PropertyPermission "os.arch", "read";
+    permission java.util.PropertyPermission "user.dir", "read";
+    permission java.util.PropertyPermission "user.home", "read";
+    permission java.util.PropertyPermission "java.io.tmpdir", "read";
+    permission java.util.PropertyPermission "jboss.modules.system.pkgs", "read, write";
+
+    permission java.io.FilePermission "C:/Program Files/JetBrains/IntelliJ IDEA 2018.1/bin/", "read";
+    permission java.io.FilePermission "C:/Program Files/JetBrains/IntelliJ IDEA 2018.1/bin/-", "read";
+
+    permission java.io.FilePermission "C:/Users/kaddepal.ORADEV/AppData/Local/Temp/", "read, write, delete";
+    permission java.io.FilePermission "C:/Users/kaddepal.ORADEV/AppData/Local/Temp/-", "read, write, delete";
+
+    permission java.util.PropertyPermission "idea.launcher.bin.path", "read";
+    permission java.lang.reflect.ReflectPermission "suppressAccessChecks", "read";
+
+    premission java.lang.RuntimePermission
+};
+
