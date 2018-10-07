@@ -54,6 +54,7 @@ public class ShellFolderQueriesTest {
         Rectangle rect = new Rectangle(0,0,50,50);
         System.out.println(rect);
         System.out.println(System.getProperty("java.home"));
+        testShortcutPanelFiles();
         if(System.getProperty("os.name").toLowerCase().contains("windows")) {
             System.out.println("Windows detected: will run shortcut test");
             testShortcutPanelFiles();
@@ -127,10 +128,10 @@ public class ShellFolderQueriesTest {
     }
 
     private static void testShortcutPanelFiles() {
-//        File[] shortcuts = fsv.getChooserShortcutPanelFiles();
-//        Arrays.asList(shortcuts).forEach(System.out::println);
-//        if (shortcuts.length == 0) {
-//            throw new RuntimeException("No shortcut panel files found.");
-//        }
+        File[] shortcuts = fsv.getChooserShortcutPanelFiles();
+        Arrays.asList(shortcuts).forEach(System.out::println);
+        if (shortcuts.length == 0) {
+            throw new RuntimeException("No shortcut panel files found.");
+        }
     }
 }

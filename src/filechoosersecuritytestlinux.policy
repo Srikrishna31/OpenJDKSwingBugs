@@ -1,0 +1,8 @@
+grant{
+ permission java.util.PropertyPermission "user.home", "read";
+ permission java.util.PropertyPermission "user.dir", "read";
+
+ permission java.lang.RuntimePermission "accessClassInPackage.jdk.internal.misc";
+ permission java.io.FilePermission "/Users/kaddepal/Github_Projects/OpenJDKSwingBugs/src/*", "read";
+};
+
