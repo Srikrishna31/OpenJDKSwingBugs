@@ -23,6 +23,7 @@ public class TabbedPaneDemo {
         tp.add("help",p3);
         f.add(tp);
         f.setSize(400,400);
+        f.setDefaultCloseOperation(TestFrame.EXIT_ON_CLOSE);
         f.setLayout(null);
         f.setVisible(true);
     }
