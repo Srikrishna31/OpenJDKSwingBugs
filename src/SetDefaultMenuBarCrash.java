@@ -66,6 +66,7 @@ Severity:
     fatal
 
 author Robert.Straub@sap.com
+JDK-8204616
  */
 public class SetDefaultMenuBarCrash {
     public SetDefaultMenuBarCrash() {
@@ -185,14 +186,10 @@ public class SetDefaultMenuBarCrash {
         //Desktop.getDesktop().setDefaultMenuBar(createMB("-DEFAULT"));
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws  Exception {
         // on macOS show menubar as ScreenMenuBar
         System.setProperty("apple.laf.useScreenMenuBar", "true");
 
-        javax.swing.SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
-                createAndShowGUI();
-            }
-        });
+        javax.swing.SwingUtilities.invokeAndWait(SetDefaultMenuBarCrash::createAndShowGUI);
     }
 }
