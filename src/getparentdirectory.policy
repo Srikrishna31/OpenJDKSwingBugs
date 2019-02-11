@@ -1,0 +1,15 @@
+grant {
+permission java.util.PropertyPermission "os.name", "read";
+permission java.util.PropertyPermission "os.arch", "read";
+permission java.io.FilePermission "D:\\Program Files\\JetBrains\\IntelliJ IDEA 2018.3.4\\bin\\breakgen64.dll", "read";
+permission java.lang.RuntimePermission "loadLibrary.D:\\Program Files\\JetBrains\\IntelliJ IDEA 2018.3.4\\bin\\breakgen64.dll", "read";
+permission java.util.PropertyPermission "idea.launcher.port", "read";
+permission java.util.PropertyPermission "idea.launcher.bin.path", "read";
+permission java.lang.reflect.ReflectPermission "suppressAccessChecks", "read";
+
+
+permission java.io.FilePermission "C:${/}", "read";
+permission java.io.FilePermission "${user.home}${/}", "read";
+permission java.io.FilePermission "${user.home}${/}Desktop{/}", "read";
+permission java.util.PropertyPermission "user.home", "read";
+};
