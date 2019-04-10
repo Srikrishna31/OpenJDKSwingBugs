@@ -8,6 +8,7 @@ import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.MenuBar;
 import java.awt.event.KeyEvent;
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -29,8 +30,7 @@ import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.table.AbstractTableModel;
 import javax.swing.table.TableModel;
-
-import com.sun.java.swing.plaf.windows.WindowsLookAndFeel;
+import javax.swing.UIManager.LookAndFeelInfo;
 
 /**
  * DEMO: Die Tabelle enthält insgesamt TOTAL_RESULTS Einträge, die in Portionsgrößen von jeweils PAGE_SIZE geladen
@@ -181,15 +181,18 @@ public class DemoMenuVerzoegerungBeiGrossenTabellen extends JFrame {
         return menu;
     }
 
-    public static void main(String[] args) throws UnsupportedLookAndFeelException {
-        UIManager.setLookAndFeel(new WindowsLookAndFeel());
-        SwingUtilities.invokeLater(new Runnable() {
-
-            @Override
-            public void run() {
+    public static void main(String[] args) throws UnsupportedLookAndFeelException,
+                        IllegalAccessException, InstantiationException, ClassNotFoundException,
+                        InterruptedException, InvocationTargetException {
+        LookAndFeelInfo[] lnfs = UIManager.getInstalledLookAndFeels();
+        for (LookAndFeelInfo lnf : lnfs) {
+            if (lnf.getClassName().contains("Windows")){
+                UIManager.setLookAndFeel(lnf.getClassName());
+            }
+        }
+        SwingUtilities.invokeAndWait(() -> {
                 JFrame f = new DemoMenuVerzoegerungBeiGrossenTabellen();
                 f.setVisible(true);
-            }
         });
     }
 
