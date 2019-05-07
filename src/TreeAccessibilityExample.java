@@ -30,6 +30,7 @@ public class TreeAccessibilityExample {
                 JTree jt=new JTree(style);
                 f.add(jt);
                 f.setSize(200,200);
+                f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 f.setVisible(true);
             });
         } catch (Exception e) {
